@@ -86,9 +86,10 @@
 - (void)adView:(__unused GADBannerView *)adView
 didFailToReceiveAdWithError:(GADRequestError *)error
 {
-    if (self.onAdFailedToLoad) {
-        self.onAdFailedToLoad(@{ @"error": @{ @"message": [error localizedDescription] } });
-    }
+    // hide red screen of death
+    // if (self.onAdFailedToLoad) {
+    //     self.onAdFailedToLoad(@{ @"error": @{ @"message": [error localizedDescription] } });
+    // }
 }
 
 /// Tells the delegate that a full screen view will be presented in response
